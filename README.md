@@ -1,2 +1,2 @@
-May-i-Paste
-https://github.com/harasou/may-i-pasteを自分用にアレンジ
+#May-i-Paste
+harasouさんのmay-i-pasteを自分用にアレンジ
