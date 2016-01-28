@@ -1,23 +1,11 @@
-set theCr to ASCII character 13
-
 set strClip to get the clipboard
-set ind to offset of theCr in strClip
-set len to length of strClip
+set asciiCr to ASCII character 13
+set findCr to offset of asciiCr in strClip
 
-if ind > 0 then
-  if ind = len then
-    set the clipboard to characters 1 thru (len - 1) of strClip as text
-  else
-    display dialog "May I Paste ?" buttons {"Yes", "No"} default button 2 default answer strClip
-    set ret to result
-    if button returned of ret is "Yes" then
-      set the clipboard to text returned of ret
-    else
-      error number -128
-    end if
-  end if
-end if
-
-tell application "System Events"
-  keystroke "\\" using command down
-end tell
+if findCr = 0 then
+    tell application "System Events" to keystroke "v" using {command down}
+else if findCr > 0 then
+    set EditTxt to the text returned of (display dialog "may i paste?" default answer strClip)
+    set the clipboard to EditTxt
+    tell application "System Events" to keystroke "v" using {command down}
+end
