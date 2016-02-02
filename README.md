@@ -2,7 +2,7 @@
 harasouさんのmay-i-pasteを自分用にアレンジ
 #How To Use
 ```
-git clone git@github.com:harasou/may-i-paste.git
+git clone git@github.com:harasou/may-i-paste.git may-i-paste
 ```
 ```
 mkdir ~/Library/Application\ Support/iTerm/Scripts
